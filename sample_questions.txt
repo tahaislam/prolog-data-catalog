@@ -1,0 +1,3 @@
+Gold datasets missing reviewers or validators
+Trace lineage for gold_customer_data.email
+what is the impact if I changed gold_customer_data.email
