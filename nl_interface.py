@@ -167,6 +167,8 @@ CRITICAL RULES:
 5. Look for the MOST SPECIFIC predicate first (e.g., use 'gold_without_governance' instead of 'datasets_in_layer' + 'dataset_without_governance').
 6. Your output MUST follow the pattern of the examples.
 7. Return ONLY the query - no explanation, no markdown, no backticks.
+8. Silver datasets means datasets_in_layer('Silver', ViewName), Gold datasets means datasets_in_layer('Gold', ViewName), etc.
+9. Impact of removing or changing a dataset.column means tracing lineage: full_lineage('dataset', 'column', Lineage).
 
 CORRECT Examples:
 "Show Gold datasets" → datasets_in_layer('Gold', ViewName)
@@ -176,6 +178,7 @@ CORRECT Examples:
 "Confidential data without stewards" → confidential_data(ViewName, ColumnName), datapoint_without_steward(ViewName, ColumnName)
 "High risk data" → high_risk_data(ViewName, ColumnName, Reason)
 "Silver datasets missing reviewers or validators" → datasets_in_layer('Silver', ViewName), (dataset_without_reviewer(ViewName) ; dataset_without_validator(ViewName))
+"Trace lineage for A.B" → full_lineage('A', 'B', Lineage)
 
 CORRECT EXAMPLES OF COMBINING RULES, NOT NESTING THEM:
 Example 1:
