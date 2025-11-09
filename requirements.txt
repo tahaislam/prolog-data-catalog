@@ -1,0 +1,8 @@
+# Python dependencies for Metadata AI System
+pandas>=2.0.0
+openpyxl>=3.1.0
+pyswip>=0.2.10
+python-dateutil>=2.8.0
+
+# Optional: For AI-enhanced natural language understanding
+requests>=2.31.0  # For Ollama API calls
